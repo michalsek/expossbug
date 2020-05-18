@@ -30,11 +30,11 @@ class App extends React.Component {
 
   async componentDidMount() {
     // Prevent native splash screen from autohiding
-    // try {
-    await SplashScreen.preventAutoHideAsync();
-    // } catch (e) {
-    //   console.log(e);
-    // }
+    try {
+      await SplashScreen.preventAutoHideAsync();
+    } catch (e) {
+      console.log(e);
+    }
 
     setTimeout(() => {
       this.setState({ready: true});
